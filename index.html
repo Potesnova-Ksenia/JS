@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <style>
+        body{background: linear-gradient(to right, #ff7e5f, #feb47b, #ffcc33);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    height: 100vh; 
+    margin: 0; 
+        .pink{
+            background-color: rgb(245, 226, 229);
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+    <body>
+        <h1>~Простые скрипты~</h1>
+        <h2>1. Числа</h2>
+        <p>Сложение трёх чисел</p>
+        <div class="pink">
+                <script>
+                    let sumThree = (a, b, c) => a + b + c;
+                    document.write('sumThree(a, b, c) = ');
+                    document.write(sumThree(1, 2, 3));
+                </script>
+        </div>
+        <p>Проверка на отрицательное число</p>
+        <div class="pink">
+                <script>
+                    let isNegative = (num) => num < 0;
+                    document.write('isNegative(7) = ');
+                    document.write(isNegative(7));
+                </script>
+        </div>
+        <p>Умножение чисел</p>
+        <div class="pink">
+            <script>
+                let multiply = (a,b) => a*b;
+                document.write('multiply(4,3) = ');
+                document.write(multiply(4,3));
+            </script>
+    </div>
+    <p>Определение целого числа</p>
+        <div class="pink">
+            <script>
+                let isInteger = (num) => Number.isInteger(num);
+                document.write('isInteger(6.4) = ');
+                document.write(isInteger(6.4));
+            </script>
+    </div>
+    <p>Подсчет процента</p>
+    <div class="pink">
+        <script>
+            let percentage = (total, percent) => (percent*total)/100;
+            document.write('percentage(33, 5) = ');
+            document.write(percentage(33, 5));
+        </script>
+</div>
+    <h2>2. Строки</h2>
+    <p>Последний символ строки</p>
+            <div class="pink">
+                    <script>
+                        let lastChar = (str) => str.charAt(str.length - 1);
+                        document.write('lastChar(Ksusha) = ');
+                        document.write(lastChar('Ksusha'));
+                    </script>
+            </div>
+            <p>Преобразование строки в нижний регистр</p>
+            <div class="pink">
+                    <script>
+                        let toLower = (str) => str.toLowerCase(str);
+                        document.write('toLower(Hello, UIR) = ');
+                        document.write(toLower('Hello, UIR'));
+                    </script>
+            </div>
+            <p>Проверка вхождения подстроки</p>
+            <div class="pink">
+                    <script>
+                        let contains = (str, subStr) => str.includes(subStr);
+                        document.write('contains(I ❤️ Webdesign, Webdesign) = ');
+                        document.write(contains('I ❤️ Webdesign', 'Webdesign'));
+                    </script>
+            </div>
+            <p>Удвоение строки</p>
+            <div class="pink">
+                    <script>
+                        let repeatTwice = (str) => str + str;
+                        document.write('repeatTwice(I ❤️ Webdesign) = ');
+                        document.write(repeatTwice('I ❤️ Webdesign'));
+                    </script>
+            </div>
+            <p>Удаление пробелов с начала и конца строки</p>
+            <div class="pink">
+                    <script>
+                        let trimSpaces = (str) => str.trim();
+                        document.write('trimSpaces( I ❤️ Webdesign) =');
+                        document.write(trimSpaces(' I ❤️ Webdesign'));
+                    </script>
+            </div>
+            <h2>3. Булевы значения</h2>
+    <p>Логическое "И НЕ"</p>
+            <div class="pink">
+                    <script>
+                        let andNot = (a,b) => a && !b;
+                        document.write('andNot(1,0) = ');
+                        document.write(andNot(1,0));
+                    </script>
+            </div>
+            <p>Проверка значения</p>
+            <div class="pink">
+                    <script>
+                        let  isTrue = (value) => value==0 || value==1;
+                        document.write('isTrue(3) = ');
+                        document.write(isTrue(3));
+                    </script>
+            </div>
+            <p>Сравнение двух логических значений</p>
+            <div class="pink">
+                    <script>
+                        let  isSame = (a, b) => a === b;
+                        document.write('isSame(1, a) = ');
+                        document.write(isSame(1, 'a'));
+                    </script>
+            </div>
+            <p>Логическое исключающее "ИЛИ"</p>
+            <div class="pink">
+                    <script>
+                        let  xor = (a, b) => a != b;
+                        document.write('xor(1, 0) = ');
+                        document.write(xor(1, 0));
+                    </script>
+            </div>
+            <p>Обратное значение</p>
+            <div class="pink">
+                    <script>
+                        let  toggle = (value) => !value;
+                        document.write('toggle(0) = ');
+                        document.write(toggle(0));
+                    </script>
+            </div>
+            <h2>4. Объекты</h2>
+    <p>Проверка существования свойства</p>
+            <div class="pink">
+                    <script>
+                        let hasKey = (obj, key) => obj.hasOwnProperty(key);
+                        const object = {
+                            name: "Ksusha",
+                            age: 20
+                        }
+                        document.write('hasKey(object,age) = ');
+                        document.write(hasKey(object, "age"));
+                    </script>
+            </div>
+            <p>Получение всех ключей объекта</p>
+            <div class="pink">
+                    <script>
+                        let  getKeys = (obj) => Object.keys(obj).join(', ');
+                        const obj2 = {
+                            name: "Ksusha",
+                            age: 20
+                        }
+                        document.write('getKeys(obj2) = ');
+                        document.write(getKeys(obj2));
+                    </script>
+            </div>
+            <p>Сравнение двух объектов</p>
+            <div class="pink">
+                    <script>
+                        let  isEqual = (obj1, obj2) => obj3===obj4;
+                        const obj3 = {
+                            name: "Ksusha",
+                            age: 20
+                        }
+                        const obj4 = {
+                            name: "Alina",
+                            age: 25
+                        }
+                        document.write('isEqual(obj1, obj2) = ');
+                        document.write(isEqual(obj3, obj4));
+                    </script>
+            </div>
+            <p>Удаление свойства из объекта</p>
+            <div class="pink">
+                    <script>
+                        let  removeKey = (obj1, key) => delete ob1[key];
+                        const ob1 = {
+                            name: "Ksusha",
+                            age: 20
+                        }
+                        removeKey(ob1, "name");
+                        document.write('removeKey(obj1, "name") = ');
+                        document.write(JSON.stringify(ob1));
+                    </script>
+            </div>
+            <p>Проверка значения свойства</p>
+            <div class="pink">
+                    <script>
+                        let  isValueEqual = (obj, key, value) => ob2[key] === value;
+                        const ob2 = {
+                            name: "Ksusha",
+                            age: 20,
+                            city: "Gomel"
+                        }
+                       
+                        document.write('isValueEqual(ob2, "name", "Alina") = ');
+                        document.write( isValueEqual(ob2, "name", "Alina"));
+                    </script>
+            </div>
+            <h2>5. Задачи на массивы</h2>
+            <p>Создание массива из чисел</p>
+            <div class="pink">
+                    <script>
+                        let createArray = (start, end) => {
+                            const result = []; 
+                            for (let i = start; i <= end; i++) {
+                                result.push(i);
+                            }
+                            return result; 
+                        };
+
+                        const arrayResult = createArray(1, 12); 
+                        document.write('createArray(1, 12) = ');
+                        document.write(JSON.stringify(arrayResult));
+                    </script>
+            </div>
+            <p>Проверка элемента в массиве</p>
+            <div class="pink">
+                    <script>
+                        let contain = (array, element) => array.includes(element);
+
+                        const groups = ["UIR-1", "UIR-2", "GUP-1"];
+                        document.write('contains(groups, "UIR-1") = ');
+                        document.write(contains(groups, "UIR-1"));
+                    </script>
+            </div>
+            <p>Длина массива</p>
+            <div class="pink">
+                    <script>
+                        let getLength = (array) => array.length;
+
+                        const spec = ["UIR", "GUE", "GUP"];
+                        document.write('getLength(spec) = ');
+                        document.write(getLength(spec));
+                    </script>
+            </div>
+            <p>Добавление элемента в конец массива</p>
+            <div class="pink">
+                    <script>
+                        let addToEnd = (array, element) => {
+            array.push(element); 
+            return array;  
+        };
+
+                const names = ["Ksusha", "Angelina", "Andrei"];
+                const nameResult = addToEnd(names, "Violetta"); 
+                document.write('addToEnd(names, "Violetta") = ');
+                document.write(JSON.stringify(nameResult));
+                            </script>
+            </div>
+            <p>Получение последнего элемента массива</p>
+            <div class="pink">
+                    <script>
+                        let getLastElement = (array) => array[array.length - 1];
+
+                        const group = [1, 2];
+                        document.write('getLastElement(group) = ');
+                        document.write(getLastElement(group));
+                    </script>
+            </div>
+            <h2>6. Задачи на обработку массивов с помощью forEach</h2>
+            <p>Вывод всех элементов массива в консоль</p>
+            <div class="pink">
+                    <script>
+                        function logElements(array) {
+                            array.forEach(element => {
+                            document.write(element + ' ');
+                        });
+                    }
+
+                const nam = ["Ksusha", "Angelina", "Andrei"];
+                document.write('logElements(nam) = ');
+                logElements(nam);
+                    </script>
+            </div>
+            <p>Сумма чисел массива</p>
+            <div class="pink">
+                    <script>
+                    function sumArray(array) {
+                    return array.reduce((sum, current) => sum + current, 0);
+                }
+
+                const moreGroups = [9, 4, 6];
+                document.write('sumArray(moreGroups) = ');
+                document.write(sumArray(moreGroups));
+                    </script>
+            </div>
+            <p>Преобразование строк в верхний регистр</p>
+            <div class="pink">
+                    <script>
+                   function toUpperCase(array) {
+            const upperArray = array.map(element => element.toUpperCase()); 
+            upperArray.forEach(element => {
+                console.log(element); 
+            });
+            return upperArray; 
+                }
+
+                const fam = ["ksusha", "angelina", "andrei"];
+                const upRes = toUpperCase(fam); 
+                document.write('toUpperCase(fam) = ');
+                document.write(JSON.stringify(upRes));
+                    </script>
+            </div>
+            <p>Подсчёт количества отрицательных чисел</p>
+            <div class="pink">
+                    <script>
+                   function countNegatives(array) {
+                    return array.filter(num => num < 0).length;
+                }
+
+                const numbers = [1, -9, -3, -14, 5, -6];
+                document.write('countNegatives(numbers) = ');
+                document.write( countNegatives(numbers));
+                    </script>
+            </div>
+            <h2>7. Задачи на map</h2>
+            <p>Квадраты чисел</p>
+            <div class="pink">
+                    <script>
+                        function squareNumbers(array) {
+                        return array.map(num => num * num); 
+                    }
+
+
+                    const numbs = [1, 2, 3, 4, 5];
+
+                    const squaredNumbers = squareNumbers(numbs);
+                        document.write('squareNumbers(array) = ');
+                        document.write(JSON.stringify( squaredNumbers));
+                    </script>
+            </div> 
+            <p>Удвоение элементов массива</p>
+            <div class="pink">
+                    <script>
+                        function doubleElements(array) {
+                            return array.map(num => num * 2); 
+                        }
+
+                        const numbs2 = [1, 2, 3, 4, 5];
+
+                        const doubledNumbers = doubleElements(numbs2);
+                        document.write('doubleElements(array) = ');
+                        document.write(JSON.stringify( doubledNumbers));
+                    </script>
+            </div>
+            <p>Извлечение первых букв строк</p>
+            <div class="pink">
+                    <script>
+                        function getFirstLetters(array) {
+                        return array.map(str => str.charAt(0)); 
+                    }
+
+
+                    const words = ["uir", "au", "love", "forever"];
+
+                    const firstLetters = getFirstLetters(words);
+                        document.write('getFirstLetters(array) = ');
+                        document.write(JSON.stringify( firstLetters));
+                    </script>
+            </div>
+    </body>
+</html>
